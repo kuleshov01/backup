@@ -5,7 +5,8 @@ services:
     image: commanderhu/rsync-server
     container_name: rsync-server
     volumes:
-      - /var/lib/docker/volumes/zeppelin_notebook/_data:/data/zeppelin_conf # Путь слева указывает путь, для которого необходимо создать резервную копию
+      - /var/lib/docker/volumes/zeppelin_conf/_data:/data/zeppelin_conf # Путь слева указывает путь, для которого необходимо создать резервную копию
+      - /var/lib/docker/volumes/zeppelin_notebook/_data:/data/zeppelin_notebook # Путь слева указывает путь, для которого необходимо создать резервную копию
       # - /data:/data/ # Путь слева указывает путь, для которого необходимо создать резервную копию
     ports:
       - "874:873"
