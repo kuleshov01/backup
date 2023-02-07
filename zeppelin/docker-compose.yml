@@ -1,0 +1,17 @@
+version: "2.2"
+services:
+  zeppelin:
+    image: apache/zeppelin:0.10.1
+    ports:
+    - '8090:8080'
+    container_name: zeppelin
+    environment:
+    - FLINK_HOME=/opt/flink/
+    - TZ=Asia/Sakhalin
+    volumes:
+    - conf:/opt/zeppelin/conf/
+    - notebook:/opt/zeppelin/notebook
+
+volumes:
+    conf:
+    notebook:
