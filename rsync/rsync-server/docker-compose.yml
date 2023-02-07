@@ -10,7 +10,7 @@ services:
     ports:
       - "874:873"
     environment:
-      RSYNC_IP: flink.tk-1.ru # Локальный адрес
+      RSYNC_IP: 10.10.250.146 # Локальный адрес
       RSYNC_PORT: 874 # Отображение порта
-      REMOTE_HOST_IP: clickhouse.tk-1.ru # ip клиента
+      REMOTE_HOST_IP: 10.10.250.145 # ip клиента
       REMOTE_HOST_PORT: 22023 # Порт клиента
