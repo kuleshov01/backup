@@ -1,0 +1,14 @@
+version: '2'
+services:
+  rsync-client:
+    restart: always
+    image: commanderhu/rsync-client
+    container_name: rsync-client
+    volumes:
+      - / home / rsync / rsync_backup /: / backup_client / # Путь к файлу резервной копии слева
+    ports:
+      - "22023:22"
+    environment:
+             -SLEEP_TIME = 86400 # Единица: секунда, время каждого интервала резервного копирования, по умолчанию 86400
+             -EXPIRATION_DAY = 15 # Единица: дни, время хранения файла 
+             -MINIMUM_DISK = 500 # Единица: G, наименьшее зарезервированное пространство на диске

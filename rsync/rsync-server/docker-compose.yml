@@ -1,0 +1,15 @@
+version: '2'
+services:
+  rsync-server:
+    restart: always
+    image: commanderhu/rsync-server
+    container_name: rsync-server
+    volumes:
+             - /var/lib/docker/volumes/zeppelin_conf/_data:/data/ # Путь слева указывает путь, для которого необходимо создать резервную копию
+    ports:
+      - "874:873"
+    environment:
+             -RSYNC_IP = ip # Локальный адрес
+             -RSYNC_PORT = 874 # Отображение порта
+             -REMOTE_HOST_IP = ip # ip клиента
+             -REMOTE_HOST_PORT = 22023 # Порт клиента
