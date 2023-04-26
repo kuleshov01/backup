@@ -1,0 +1,60 @@
+{
+    "title": "Смена раскладки на Mac",
+    "rules": [
+        {
+            "description": "Одиночное нажатие на fn только macbook меняет клавиатуры",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "fn"
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "input_source_id": "com.apple.keylayout.US",
+                                "language": "en"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^ru$",
+                                    "input_source_id": "^com\\.apple\\.keylayout\\.Russian"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "fn"
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "language": "^ru$",
+                                "input_source_id": "^com\\.apple\\.keylayout\\.Russian"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.US",
+                                    "language": "en"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
