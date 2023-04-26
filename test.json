@@ -2,87 +2,123 @@
     "title": "test",
     "rules": [
       {
-        "description": "test",
-        "manipulators": [
-            {
-                "type": "basic",
-                "from": {
-                    "key_code": "f1",
-                    "modifiers": {
-                        "optional": ["any"]
-                    }
-                },
-                "to": [
                     {
-                        "key_code": "f1",
-                        "lazy": true
-                    }
-                ],
-                "to_if_alone": [
-                    {
-                        "key_code": "japanese_eisuu"
-                    }
-                ],
-                "to_if_held_down": [
-                    {
-                        "key_code": "f1 "
-                    }
-                ],
-                "conditions": [
-                    {
-                        "input_sources": [
+                        "description": "Мы будем менять настройки раскладки клавиатуры для каждого устройства ",
+                        "manipulators": [
                             {
-                                "input_mode_id": "^com\\.apple\\.keylayout\\.RussianWin$",
-                                "language": "ru"
-                            }
-                        ],
-                        "type": "input_source_if"
-                    }
-                ],
-                "parameters": {
-                    "basic.to_if_held_down_threshold_milliseconds": 100
-                }
-            },
-            {
-                "type": "basic",
-                "from": {
-                    "key_code": "f1",
-                    "modifiers": {
-                        "optional": ["any"]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "f1",
-                        "lazy": true
-                    }
-                ],
-                "to_if_alone": [
-                    {
-                        "key_code": "japanese_kana"
-                    }
-                ],
-                "to_if_held_down": [
-                    {
-                        "key_code": "f1"
-                    }
-                ],
-                "conditions": [
-                    {
-                        "input_sources": [
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "left_alt",
+                                    "modifiers": {
+                                        "mandatory": ["left_shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                            "language": "en"
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "input_source_if",
+                                        "input_sources": [
+                                            {
+                                                "language": "^ru$",
+                                                "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
                             {
-                                "input_mode_id": "^com\\.apple\\.keylayout\\.Russian$",
-                                "language": "ru"
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "left_alt",
+                                    "modifiers": {
+                                        "mandatory": ["left_shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "^ru$",
+                                            "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "input_source_if",
+                                        "input_sources": [
+                                            {
+                                                "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                                "language": "en"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "mandatory": ["left_alt"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                            "language": "en"
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "input_source_if",
+                                        "input_sources": [
+                                            {
+                                                "language": "^ru$",
+                                                "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "mandatory": ["left_alt"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "^ru$",
+                                            "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                                        }
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "input_source_if",
+                                        "input_sources": [
+                                            {
+                                                "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                                "language": "en"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
-                        ],
-                        "type": "input_source_if"
+                        ]
                     }
-                ],
-                "parameters": {
-                    "basic.to_if_held_down_threshold_milliseconds": 100
-                }
-            }
-        ]
       }
     ]
   }
