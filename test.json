@@ -1,124 +1,130 @@
 {
-    "title": "test",
+    "title": "Смена раскладки на Windows",
     "rules": [
-      {
-                    {
-                        "description": "Мы будем менять настройки раскладки клавиатуры для каждого устройства ",
-                        "manipulators": [
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "left_alt",
-                                    "modifiers": {
-                                        "mandatory": ["left_shift"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "select_input_source": {
-                                            "input_source_id": "com.apple.keylayout.USInternational-PC",
-                                            "language": "en"
-                                        }
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "input_source_if",
-                                        "input_sources": [
-                                            {
-                                                "language": "^ru$",
-                                                "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "left_alt",
-                                    "modifiers": {
-                                        "mandatory": ["left_shift"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "select_input_source": {
-                                            "language": "^ru$",
-                                            "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
-                                        }
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "input_source_if",
-                                        "input_sources": [
-                                            {
-                                                "input_source_id": "com.apple.keylayout.USInternational-PC",
-                                                "language": "en"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": {
-                                        "mandatory": ["left_alt"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "select_input_source": {
-                                            "input_source_id": "com.apple.keylayout.USInternational-PC",
-                                            "language": "en"
-                                        }
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "input_source_if",
-                                        "input_sources": [
-                                            {
-                                                "language": "^ru$",
-                                                "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": {
-                                        "mandatory": ["left_alt"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "select_input_source": {
-                                            "language": "^ru$",
-                                            "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
-                                        }
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "input_source_if",
-                                        "input_sources": [
-                                            {
-                                                "input_source_id": "com.apple.keylayout.USInternational-PC",
-                                                "language": "en"
-                                            }
-                                        ]
-                                    }
-                                ]
+        {
+            "description": "Мы будем менять настройки раскладки клавиатуры для каждого устройства ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_alt",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                "language": "en"
                             }
-                        ]
-                    }
-      }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^ru$",
+                                    "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_alt",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "language": "^ru$",
+                                "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                    "language": "en"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_alt"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                "language": "en"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "^ru$",
+                                    "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_alt"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "select_input_source": {
+                                "language": "^ru$",
+                                "input_source_id": "^com\\.apple\\.keylayout\\.RussianWin"
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.USInternational-PC",
+                                    "language": "en"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
-  }
+}
