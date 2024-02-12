@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(host,"skud-parsec-01.skud.bg65.ru")) {
         return PROXY;
     }
-    if (shExpMatch(host,"pso-fs-101")) {
+    if (shExpMatch(host,"10.12.1.94")) {
         return PROXY;
     }
     // Everything else directly!
